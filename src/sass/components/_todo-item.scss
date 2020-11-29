@@ -1,0 +1,76 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 2rem 2.4rem;
+  border-bottom: 1px solid $color-dark-grey-5;
+  position: relative;
+  z-index: 10;
+
+  @include respond(mobile) {
+    padding: 1.6rem 2rem;
+  }
+
+  & > * {
+    cursor: pointer;
+  }
+
+  &__radio {
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    border: 1px solid $color-dark-grey-5;
+    margin-right: 2.4rem;
+    position: relative;
+
+    @include respond(mobile) {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1.2rem;
+    }
+  }
+
+  &.completed &__radio {
+    background-image: $check-gradient;
+  }
+
+  &__check {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__text {
+    margin-right: auto;
+    color: $color-light-grey-4;
+    letter-spacing: -0.25px;
+    line-height: 2.3rem;
+
+    @include respond(mobile) {
+      line-height: 1.4rem;
+      letter-spacing: -0.17px;
+    }
+  }
+
+  &.completed &__text {
+    color: $color-dark-grey-4;
+    text-decoration: line-through;
+  }
+
+  &__delete {
+    display: none;
+    height: 1.8rem;
+    margin-left: 1rem;
+
+    @include respond(mobile) {
+      display: block;
+      height: 1.2rem;
+    }
+  }
+
+  &:hover &__delete {
+    display: block;
+  }
+}

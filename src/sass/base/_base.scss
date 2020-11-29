@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+#app {
+  position: relative;
+}
+
+.layout {
+  min-height: 100vh;
+  background-color: $color-dark-blue-1;
+  overflow: hidden;
+  padding: 7rem $padding-side 5.2rem;
+
+  @include respond(mobile) {
+    padding: 4.3rem $padding-side 7.2rem;
+  }
+
+  &.light {
+    background-color: $color-light-grey-1;
+  }
+}

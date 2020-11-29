@@ -1,0 +1,24 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 7rem $padding-side;
+  height: 30rem;
+  width: 100%;
+  background-image: url(../images/bg-desktop-dark.jpg);
+  background-size: cover;
+  background-position: center;
+
+  @include respond(mobile) {
+    height: 20rem;
+    background-image: url(../images/bg-mobile-dark.jpg);
+  }
+
+  &.light {
+    background-image: url(../images/bg-desktop-light.jpg);
+
+    @include respond(mobile) {
+      background-image: url(../images/bg-mobile-light.jpg);
+    }
+  }
+}

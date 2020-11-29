@@ -1,0 +1,49 @@
+.todo-list {
+  background-color: $color-dark-blue-2;
+  border-radius: 0.5rem;
+  box-shadow: $box-shadow;
+  margin-bottom: 4.9rem;
+
+  &__filter-area {
+    display: flex;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: -0.19px;
+    color: #5b5e7e;
+    padding: 1.6rem 2.4rem;
+  }
+
+  &__count {
+    margin-right: 6.6vw;
+  }
+
+  &__filters {
+    margin-right: auto;
+  }
+
+  &__filter,
+  &__clear {
+    cursor: pointer;
+    transition: color 0.4s;
+
+    &:hover {
+      color: $color-light-grey-2;
+    }
+  }
+
+  &__filter {
+    font-weight: 700;
+
+    &--active {
+      color: $color-light-grey-2;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1.8rem;
+    }
+
+    &:first-child {
+      color: $color-bright-blue;
+    }
+  }
+}

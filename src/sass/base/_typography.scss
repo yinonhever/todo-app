@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+
+  @include respond(mobile) {
+    font-size: 1.2rem;
+  }
+}
+
+a {
+  display: block;
+}
