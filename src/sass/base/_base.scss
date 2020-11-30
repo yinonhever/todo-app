@@ -28,3 +28,19 @@ html {
     background-color: $color-light-grey-1;
   }
 }
+
+.radio {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 1px solid $color-dark-grey-5;
+  margin-right: 2.4rem;
+  position: relative;
+
+  @include respond(mobile) {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1.2rem;
+  }
+}

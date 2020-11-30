@@ -17,6 +17,9 @@ export default {
     clearFilter(state) {
         state.filter = null;
     },
+    reorderList(state, payload) {
+        state.items = payload;
+    },
     setDayMode(state) {
         state.dayMode = !state.dayMode;
     }

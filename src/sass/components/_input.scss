@@ -11,20 +11,6 @@
     padding: 0 2rem;
     margin-bottom: 1.6rem;
   }
-
-  &__radio {
-    display: block;
-    width: 2.4rem;
-    height: 2.4rem;
-    border-radius: 50%;
-    border: 1px solid $color-dark-grey-5;
-    margin-right: 2.4rem;
-
-    @include respond(mobile) {
-      width: 2rem;
-      height: 2rem;
-    }
-  }
 }
 
 .input {
@@ -38,7 +24,7 @@
   flex: 1;
 
   @include respond(mobile) {
-    padding: 1.4rem 0;
+    padding: 1.8rem 0;
     letter-spacing: -0.17px;
   }
 

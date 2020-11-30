@@ -21,6 +21,9 @@ export default {
     clearFilter(context) {
         context.commit("clearFilter");
     },
+    reorderList(context, payload) {
+        context.commit("reorderList", payload);
+    },
     toggleDayMode(context) {
         context.commit("setDayMode");
     }

@@ -1,6 +1,6 @@
 <template>
   <form class="input-wrapper" @submit.prevent="addItem">
-    <span class="input-wrapper__radio" />
+    <span class="radio" />
     <input
       type="text"
       class="input"

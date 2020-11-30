@@ -1,6 +1,6 @@
 <template>
   <div :class="classes">
-    <span class="todo-item__radio" @click="toggleCompleted">
+    <span class="radio" @click="toggleCompleted">
       <img
         v-if="completed"
         class="todo-item__check"
