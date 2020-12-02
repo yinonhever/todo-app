@@ -1,7 +1,7 @@
 <template>
-  <main :class="classes">
+  <div :class="classes">
     <slot />
-  </main>
+  </div>
 </template>
 
 <script>

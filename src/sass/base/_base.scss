@@ -4,6 +4,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: color 0.5s, background-color 0.5s, border-color 0.5s,
+    box-shadow 0.5s;
 }
 
 html {
@@ -43,4 +45,8 @@ html {
     height: 2rem;
     margin-right: 1.2rem;
   }
+}
+
+.light .radio {
+  border-color: #d1d2da;
 }

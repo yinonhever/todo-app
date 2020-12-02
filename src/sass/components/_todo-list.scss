@@ -4,6 +4,10 @@
   box-shadow: $box-shadow;
   margin-bottom: 4.9rem;
 
+  @include respond(mobile) {
+    margin-bottom: 10.4rem;
+  }
+
   &__filter-area {
     display: flex;
     font-size: 1.4rem;
@@ -11,20 +15,48 @@
     letter-spacing: -0.19px;
     color: #5b5e7e;
     padding: 1.6rem 2.4rem;
+    position: relative;
+
+    @include respond(mobile) {
+      justify-content: space-between;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+      letter-spacing: -0.17px;
+      padding: 1.6rem 2rem;
+    }
   }
 
   &__count {
     margin-right: 6.6vw;
+
+    @include respond(mobile) {
+      margin: 0;
+    }
   }
 
   &__filters {
     margin-right: auto;
+
+    @include respond(mobile) {
+      position: absolute;
+      left: 0;
+      top: calc(100% + 1.6rem);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background-color: $color-dark-blue-2;
+      border-radius: 0.5rem;
+      box-shadow: $box-shadow;
+      padding: 1.7rem;
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+      letter-spacing: -0.19px;
+    }
   }
 
   &__filter,
   &__clear {
     cursor: pointer;
-    transition: color 0.4s;
 
     &:hover {
       color: $color-light-grey-2;
@@ -45,5 +77,32 @@
     &:first-child {
       color: $color-bright-blue;
     }
+  }
+}
+
+.light .todo-list {
+  background-color: #fff;
+  box-shadow: $box-shadow-light;
+
+  &__filter-area {
+    color: $color-dark-grey-1;
+  }
+
+  &__filters {
+    @include respond(mobile) {
+      background-color: #fff;
+      box-shadow: $box-shadow-light;
+    }
+  }
+
+  &__filter,
+  &__clear {
+    &:hover {
+      color: $color-dark-grey-2;
+    }
+  }
+
+  &__filter--active {
+    color: $color-dark-grey-2;
   }
 }

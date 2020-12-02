@@ -32,3 +32,16 @@
     color: $color-dark-grey-3;
   }
 }
+
+.light .input-wrapper {
+  background-color: #fff;
+  box-shadow: $box-shadow-light;
+}
+
+.light .input {
+  color: $color-dark-grey-5;
+
+  &::placeholder {
+    color: $color-dark-grey-1;
+  }
+}

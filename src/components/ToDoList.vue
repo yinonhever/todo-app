@@ -1,14 +1,6 @@
 <template>
   <div class="todo-list">
-    <Draggable
-      v-model="items"
-      item-key="text"
-      tag="transition-group"
-      :component-data="{ tag: 'div', name: 'flip-list', type: 'transition' }"
-      ghostClass="ghost"
-      @start="isDragging = true"
-      @end="isDragging = false"
-    >
+    <Draggable v-model="items" item-key="text" ghostClass="ghost">
       <template #item="{element}">
         <ToDoItem :text="element.text" :completed="element.completed" />
       </template>
@@ -37,12 +29,9 @@ export default {
 };
 </script>
 
-<style scoped>
-.flip-list-move {
-  transition: transform 0.5s;
-}
-
-.no-move {
-  transition: transform 0s;
+<style lang="scss">
+.ghost {
+  opacity: 0.5;
+  background-color: rgba(#484b6a, 0.5);
 }
 </style>

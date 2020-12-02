@@ -1,5 +1,8 @@
 <template>
-  <header :class="classes" />
+  <header :class="classes">
+    <div class="header__bg header__bg--dark" />
+    <div class="header__bg header__bg--light" />
+  </header>
 </template>
 
 <script>

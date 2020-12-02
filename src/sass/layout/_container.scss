@@ -44,3 +44,9 @@
     letter-spacing: -0.19px;
   }
 }
+
+.light .container {
+  &__footer {
+    color: $color-dark-grey-1;
+  }
+}
