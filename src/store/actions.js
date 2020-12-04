@@ -18,9 +18,6 @@ export default {
     setFilter(context, payload) {
         context.commit("setFilter", payload);
     },
-    clearFilter(context) {
-        context.commit("clearFilter");
-    },
     reorderList(context, payload) {
         context.commit("reorderList", payload);
     },

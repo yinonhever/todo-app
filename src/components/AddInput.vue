@@ -6,7 +6,11 @@
       class="input"
       placeholder="Create a new todo..."
       v-model.trim="newItem"
+      aria-label="New item"
     />
+    <button class="input-wrapper__button">
+      <i class="fas fa-arrow-right" />
+    </button>
   </form>
 </template>
 

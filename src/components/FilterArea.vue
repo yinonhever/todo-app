@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     filterAll() {
-      this.$store.dispatch("clearFilter");
+      this.$store.dispatch("setFilter", null);
     },
     filterActive() {
       this.$store.dispatch("setFilter", "active");

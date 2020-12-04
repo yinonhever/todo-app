@@ -14,9 +14,6 @@ export default {
     setFilter(state, payload) {
         state.filter = payload;
     },
-    clearFilter(state) {
-        state.filter = null;
-    },
     reorderList(state, payload) {
         state.items = payload;
     },
