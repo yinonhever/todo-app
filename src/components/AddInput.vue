@@ -8,7 +8,7 @@
       v-model.trim="newItem"
       aria-label="New item"
     />
-    <button class="input-wrapper__button">
+    <button class="input-wrapper__button" aria-label="Add item">
       <i class="fas fa-arrow-right" />
     </button>
   </form>
