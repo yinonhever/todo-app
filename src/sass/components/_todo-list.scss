@@ -10,6 +10,7 @@
 
   &__filter-area {
     display: flex;
+    justify-content: space-between;
     font-size: 1.4rem;
     line-height: 1.4rem;
     letter-spacing: -0.19px;
@@ -18,7 +19,6 @@
     position: relative;
 
     @include respond(mobile) {
-      justify-content: space-between;
       font-size: 1.2rem;
       line-height: 1.2rem;
       letter-spacing: -0.17px;
@@ -35,12 +35,15 @@
   }
 
   &__filters {
-    margin-right: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
     @include respond(mobile) {
-      position: absolute;
       left: 0;
       top: calc(100% + 1.6rem);
+      transform: none;
       width: 100%;
       display: flex;
       justify-content: center;

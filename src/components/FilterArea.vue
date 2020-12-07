@@ -1,6 +1,6 @@
 <template>
   <div class="todo-list__filter-area">
-    <span class="todo-list__count">{{ itemsCount }} items left</span>
+    <span class="todo-list__count">{{ itemsCountText }}</span>
     <div class="todo-list__filters">
       <span class="todo-list__filter" @click="filterAll">All</span>
       <span :class="activeFilterClasses" @click="filterActive">Active</span>
@@ -19,6 +19,13 @@ export default {
   computed: {
     itemsCount() {
       return this.$store.getters.itemsCount;
+    },
+    itemsCountText() {
+      return this.itemsCount === 1
+        ? "1 item left"
+        : this.itemsCount === 0
+        ? "No items left"
+        : this.itemsCount + " items left";
     },
     currentFilter() {
       return this.$store.getters.currentFilter;
