@@ -26,14 +26,6 @@
     }
   }
 
-  &__count {
-    margin-right: 6.6vw;
-
-    @include respond(mobile) {
-      margin: 0;
-    }
-  }
-
   &__filters {
     position: absolute;
     left: 50%;
