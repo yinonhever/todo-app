@@ -1,6 +1,12 @@
 <template>
   <div class="todo-list">
-    <Draggable v-model="items" item-key="text" ghostClass="ghost">
+    <Draggable
+      v-model="items"
+      item-key="text"
+      :animation="200"
+      :disabled="false"
+      ghostClass="ghost"
+    >
       <template #item="{element}">
         <ToDoItem :text="element.text" :completed="element.completed" />
       </template>
